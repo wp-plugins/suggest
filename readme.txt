@@ -7,18 +7,18 @@ Date: 05/01/16
 
 
 
-This plugin enables a feature called "suggest". Whenever you 
-type a character in the search field of your blog site, suggestions 
-are being presented. You can select these suggestions and hit enter, 
-to execute a search request.
+This plug-in enables a feature called "suggest". Whenever you 
+type a character in the search field of your blog site, your articles 
+are being searched and suggestions are presented. You 
+can select these suggestions and hit enter, to execute a search request.
 
-For this plugin I used a javascript "library" of Google's Suggest 
+For this plug-in I used a javascript "library" of Google's Suggest 
 Search. I modified it, to adjust style and functionality , so that 
 it works with Wordpress. I tested it with Firefox 1.0 and IE 6.0 (SP1). 
 
 
 
-FILES: suggest.php - plugin file used by Wordpress
+FILES: suggest.php - plug-in file used by Wordpress
 	   /suggest/suggest_data.php - fetches data from Wordpress database
 	   /suggest/ac.js - modified javascript library
 	   
@@ -27,7 +27,7 @@ FILES: suggest.php - plugin file used by Wordpress
 INSTALLATION / CONFIGURATION:
 
 1. Copy "suggest.php" and folder (and content) "suggest" into /wp-content/plugins directory.
-   Depending on the URI of your blog, you might need to configure the directory of the plugin (step 4).
+   Depending on the URI of your blog, you might need to configure the directory of the plug-in (step 4).
 
 2. Open index.php and search for a html form called "searchform" (in my case I searched for '<form id="searchform"')
    Add a name to the form tag: 'name="searchform"'
@@ -52,18 +52,18 @@ INSTALLATION / CONFIGURATION:
    	</div>
    </form>
    
-3. Activate plugin
+3. Activate plug-in
 
-4. Open "suggest.php" to configure the plugin. Since version 0.3, it's possible to configure colors and font
+4. Open "suggest.php" to configure the plug-in. Since version 0.3, it's possible to configure colors and font
    of the dropdown, presenting the suggestions. Furthermore it's possible to configure the 
-   number of suggestions presented. You can also configure the directory of the plugin, which might be 
+   number of suggestions presented. You can also configure the directory of the plug-in, which might be 
    necessary for your blog. Since version 0.4, it's possible to enable or disable the output of 'x results' for
    Internet Explorer.
 
 
 KNOWN BUGS OF VERSION 0.4:
 
-- not XHTML valid due to missing plugin hook
+- not XHTML valid due to missing plug-in hook
 
 
 TESTED BROWSERS:
