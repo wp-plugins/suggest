@@ -1,5 +1,3 @@
-Copyright (C) David Linsin
-
 <?php
 	/*
 	Plugin Name: suggest
@@ -9,6 +7,8 @@ Copyright (C) David Linsin
 	Author: David Linsin
 	Author URI: http://blog.linsin.de/
 	*/
+
+	// Copyright (C) David Linsin
 
 /** CONFIGURATION */
 
