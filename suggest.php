@@ -3,7 +3,7 @@
 	Plugin Name: suggest
 	Plugin URI: http://blog.linsin.de/index.php/archives/2004/12/23/wordpress-plugin-suggest/
 	Description: This plugin enables a feature like Google's suggest search. When typing characters in your blog search field suggestions are being presented.
-	Version: 0.4
+	Version: 0.5
 	Author: David Linsin
 	Author URI: http://blog.linsin.de/
 	*/
