@@ -2,8 +2,8 @@
 
 Author: David Linsin
 URL: http://blog.linsin.de/index.php/archives/2004/12/23/wordpress-plugin-suggest/
-Version: 0.4
-Date: 05/01/16
+Version: 0.5
+Date: 05/04/03
 
 
 
@@ -61,9 +61,10 @@ INSTALLATION / CONFIGURATION:
    Internet Explorer.
 
 
-KNOWN BUGS OF VERSION 0.4:
+KNOWN BUGS OF VERSION 0.5:
 
 - not XHTML valid due to missing plug-in hook
+- doesn't work with WP 1.5 release
 
 
 TESTED BROWSERS:
@@ -79,26 +80,32 @@ CHANGELOG:
 
 version 0.1 -> 0.2: - suggest_data.php (better suggestions)
 
-version 0.2 -> 0.3: - suggest_data.php
-					  * added version header
-					  * improved search results (problems with upper and lower cases)
-					  * added max number of suggestions
-					- suggest.php
-					  * added global configuration parameters
-					  * changed output of insertGoogleScript for XHTML validation
-					  * changed output of insertSuggestLoad for configuration of style
-					- ac.js
-					  * added version header
-					  * changed method InstallAC for configuration of style
-					  * added variables for style
-					  * changed method l for configuration of style
+version 0.2 -> 0.3: 	- suggest_data.php
+			  * added version header
+			  * improved search results (problems with upper and lower cases)
+			  * added max number of suggestions
+			- suggest.php
+			  * added global configuration parameters
+			  * changed output of insertGoogleScript for XHTML validation
+			  * changed output of insertSuggestLoad for configuration of style
+			- ac.js
+			  * added version header
+			  * changed method InstallAC for configuration of style
+			  * added variables for style
+			  * changed method l for configuration of style
 					  
 version 0.3 -> 0.4:	- suggest_data.php
-					  * added wordpress 1.5 support
-					- suggest.php
-					  * added global configuration parameter to configure output of 'x results' with IE
-					- ac.js
-					  * changes method rb to enable configuration of 'x results' output with IE
+			  * added wordpress 1.5 (pre-release) support
+			- suggest.php
+			  * added global configuration parameter to configure output of 'x results' with IE
+			- ac.js
+			  * changes method rb to enable configuration of 'x results' output with IE
+
+version 0.4 -> 0.5:	- suggest_data.php
+			  * replaced php short tags with full tags (ticket #74)
+			  * only posts marked as public or static are being searched for suggestions
+			- suggest.php
+			  * replaced php short tags with full tags (ticket #74)
 
 LICENSE for suggest.php & suggest_data.php:
 
