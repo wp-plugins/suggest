@@ -1,8 +1,13 @@
 <?
 // David Linsin
-// version 0.3
+// version 0.4
 
 include('../../../wp-config.php');
+
+// WP 1.5 support
+if(empty($qu)) {
+$qu = $_REQUEST['qu'];
+}
 
 if(!empty($qu)) {
 	$query = "select distinct post_content as val from $tableposts where post_content like '%".$qu."%' order by val";
