@@ -10,7 +10,7 @@ $qu = $_REQUEST['qu'];
 }
 
 if(!empty($qu)) {
-	$query = "select post_content as val from $tableposts where post_content like '%".$qu."%' order by val";
+	$query = "select distinct post_content as val from $tableposts where post_status in ('publish','static') and post_content like '%".$qu."%' order by val";
 
 	$db_values = $wpdb->get_results($query);
 	$result = "sendRPCDone(frameElement, \"".$qu."\", new Array(";
