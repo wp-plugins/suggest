@@ -1,6 +1,5 @@
-Copyright (C) David Linsin
-
 <?
+// Copyright (C) David Linsin
 // version 0.4
 
 include('../../../wp-config.php');
