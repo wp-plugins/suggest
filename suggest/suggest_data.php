@@ -1,10 +1,10 @@
 <?php
 // Copyright (C) David Linsin
-// version 0.4
+// version 0.5
 
 include('../../../wp-config.php');
 
-// WP 1.5 support
+// WP 1.5 (pre-release) support
 if(empty($qu)) {
 $qu = $_REQUEST['qu'];
 }
