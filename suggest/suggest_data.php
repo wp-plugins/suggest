@@ -1,4 +1,4 @@
-<?
+<?php
 // Copyright (C) David Linsin
 // version 0.4
 
