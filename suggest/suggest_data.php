@@ -11,15 +11,15 @@ $qu = $_REQUEST['qu'];
 }
 
 if(!empty($qu)) {
-	$query = "select distinct post_content as val from $tableposts where post_content like '%".$qu."%' order by val";
+	$query = "select post_content as val from $tableposts where post_content like '%".$qu."%' order by val";
 
 	$db_values = $wpdb->get_results($query);
 	$result = "sendRPCDone(frameElement, \"".$qu."\", new Array(";
 	$i = 0;
 	$k = 0;
 	$exists = false;
-	$exit = false;
 	$previous;
+	// construct js array with suggest values
 	foreach($db_values as $res) {
 		$text = $res->val;
 
@@ -35,44 +35,34 @@ if(!empty($qu)) {
 
 			// check if already used
 			for($j = 0; $j < sizeof($previous); $j++) {
-				if($word == $previous[$j]) {
+				if($word == $previous[$j][0]) {
+					$previous[$j][1]++;
 					$exists = true;
 					break;
 				}
 			}
 
-			// if text does not exist
-			if(!$exists) {
+			// if text does not exist && the max suggestions aren't reched
+			if(!$exists && $k < $MAX_SUGGESTIONS) {
 				if($i == 0) {
 					$result = $result . "\"" . $word . "\"";
 				}
 				else {
 					$result = $result . ",\"" . $word . "\"";
 				}
-				$previous[$k] = $word;
+				$previous[$k][0] = $word;
+				$previous[$j][1]++;
 				$k++;
 			}
 
 			$i++;
 			$exists = false;
-
-			// exit if max suggestions reached
-			if($k >= $MAX_SUGGESTIONS) {
-				$exit = true;
-				break;
-			}
-		}
-		// if max suggestions reached exit
-		if($exit) {
-			break;
 		}
 	}
 	$result = $result . "), new Array(";
-
+	// construct js array with number of results
 	for($i=0; $i < sizeof($previous); $i++) {
-		$query = "select distinct count(*) as cnt from $tableposts where post_content like '%".addslashes($previous[$i])."%'";
-		$res = $wpdb->get_row($query);
-		$text = $res->cnt;
+		$text = $previous[$i][1];
 		if($i == 0) {
 			$result = $result . "\"" . $text . "\"";
 		}
@@ -85,8 +75,3 @@ if(!empty($qu)) {
 	echo $result;
 }
 ?>
-
-
-
-
-
