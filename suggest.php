@@ -1,3 +1,5 @@
+Copyright (C) David Linsin
+
 <?php
 	/*
 	Plugin Name: suggest
