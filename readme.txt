@@ -29,9 +29,9 @@ INSTALLATION / CONFIGURATION:
 1. Copy "suggest.php" and folder (and content) "suggest" into /wp-content/plugins directory.
    Depending on the URI of your blog, you might need to configure the directory of the plug-in (step 4).
 
-2. Open index.php and search for a html form called "searchform" (in my case I searched for '<form id="searchform"')
-   Add a name to the form tag: 'name="searchform"'
-   Add the attribute 'autocomplete="off"' to the input field with the id "s"
+2. Open the template file that contains your search box and search for a html form called "searchform" 
+   (in my case I opened header.php of my template and searched for '<form id="searchform"'). Add a name 
+   to the form tag: 'name="searchform"'. Add the attribute 'autocomplete="off"' to the input field with the id "s"
    Change button name from "submit" to "subButton"
    
    my original form:
