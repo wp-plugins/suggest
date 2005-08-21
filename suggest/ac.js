@@ -1,6 +1,6 @@
 // Copyright 2004 and onwards Google Inc.
 // modified by David Linsin
-// version 0.5
+// version 0.6
 
 var resultsIEOutput=false;var textFont="arial,sans-serif";var suggestColor="black";var resultsColor="#DF1111";var markedRowColor="#DF1111";var w="";var pa=false;var ta="";var da=false;var g="";var G="";var m="";var j=-1;var h=null;var Z=-1;var za=null;var Ca=5;var q="";var Lb="div";var Bb="span";var la=null;var a=null;var b=null;var Xa=null;var mb=null;var X=null;var ha=null;var ra=false;var kc=null;var hc=null;var Ua=new Object();var ca=1;var Aa=1;var Y=false;var na=-1;var Va=(new Date()).getTime();var Q=false;var k=null;var sa=null;var E=null;var B=null;var aa=null;var Ba=false;var Ka=false;var p=60;var ia=null;var ya=null;var W=0;InstallAC=function(frm,fld,sb,pn,rl,hd,sm,ufn,colMarkedRow,colResults,colSuggest,txtFont,argResultsIEOutput){resultsIEOutput=argResultsIEOutput;textFont=txtFont;suggestColor=colSuggest;markedRowColor=colMarkedRow;resultsColor=colResults;la=frm;a=fld;Xa=sb;if(!pn)pn="search";ia=pn;var Kb="en|";var Jb="zh-CN|zh-TW|ja|ko|vi|";if(!rl||Kb.indexOf(rl+"|")==-1)rl="en";ha=nb(rl);if(Jb.indexOf(ha+"|")==-1){X=true;Y=false;Ba=false}else{X=false;if(ha.indexOf("zh")==0)Y=false;else Y=true;Ba=true}if(!hd)hd=false;ya=hd;if(!sm)sm="query";w=sm;mb=ufn;ac()}
 ;function Yb(){ra=true;a.blur();setTimeout("sfi();",10);return}

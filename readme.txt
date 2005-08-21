@@ -1,9 +1,9 @@
-///////****** Wordpress 1.2 Plugin - suggest ******\\\\\\
+///////****** Wordpress 1.5 Plugin - suggest ******\\\\\\
 
 Author: David Linsin
 URL: http://blog.linsin.de/index.php/archives/2004/12/23/wordpress-plugin-suggest/
-Version: 0.5
-Date: 05/04/03
+Version: 0.6
+Date: 05/08/21
 
 
 
@@ -14,7 +14,7 @@ can select these suggestions and hit enter, to execute a search request.
 
 For this plug-in I used a javascript "library" of Google's Suggest 
 Search. I modified it, to adjust style and functionality , so that 
-it works with Wordpress. I tested it with Firefox 1.0 and IE 6.0 (SP1). 
+it works with Wordpress. I tested it with Firefox 1.0.6 and IE 6.0 (SP2). 
 
 
 
@@ -61,16 +61,16 @@ INSTALLATION / CONFIGURATION:
    Internet Explorer.
 
 
-KNOWN BUGS OF VERSION 0.5:
+KNOWN BUGS OF VERSION 0.6:
 
-- not XHTML valid due to missing plug-in hook
-- doesn't work with WP 1.5 release
+- not XHTML valid due to JavaScript limitations
+- problems displaying results in InternetExplorer
 
 
 TESTED BROWSERS:
 
-Mozilla Firefox 1.0 - no problems
-Internet Explorer 6.0 SP1 - known problems displaying results, won't be fixed
+Mozilla Firefox 1.0.6 - problems with script tag, messing up my layout
+Internet Explorer 6.0 SP2 - known problems displaying results, won't be fixed
 Opera 7.54 - not working, cause XMLHttpRequest is not supported
 Safari 1.2.4 - no problems
 
@@ -106,6 +106,8 @@ version 0.4 -> 0.5:	- suggest_data.php
 			  * only posts marked as public or static are being searched for suggestions
 			- suggest.php
 			  * replaced php short tags with full tags (ticket #74)
+version 0.5 -> 0.6:	- readme.txt
+			  * added WP 1.5 issues
 
 LICENSE for suggest.php & suggest_data.php:
 

@@ -1,6 +1,6 @@
 <?php
 // Copyright (C) David Linsin
-// version 0.5
+// version 0.6
 
 include('../../../wp-config.php');
 
